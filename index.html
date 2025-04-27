@@ -1,49 +1,82 @@
 <!DOCTYPE html>
+<!-- Указывает, что документ является HTML5 -->
+
 <html lang="en">
+<!-- Начало HTML-документа с указанием языка (английский) -->
 
 <head>
+    <!-- Начало секции заголовка документа -->
     <meta charset="UTF-8">
+    <!-- Устанавливает кодировку документа на UTF-8 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Указывает браузеру использовать режим совместимости с последними версиями Internet Explorer -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Устанавливает параметры отображения для мобильных устройств -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Подключает шрифты Poppins и Roboto из Google Fonts -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Подключает библиотеку иконок Font Awesome для использования иконок -->
     <link rel="stylesheet" href="style.css">
+    <!-- Подключает внешний файл стилей (CSS) -->
     <title>Weather App</title>
+    <!-- Устанавливает заголовок страницы, который отображается на вкладке браузера -->
 </head>
 
 <body>
-
+    <!-- Начало тела документа -->
     <div class="container">
+        <!-- Контейнер для всего содержимого приложения погоды -->
+        
         <div class="search-box">
+            <!-- Контейнер для поля поиска -->
             <i class="fa-solid fa-location-dot"></i>
+            <!-- Иконка местоположения из Font Awesome -->
             <input type="text" placeholder="Enter your location">
+            <!-- Поле ввода для ввода местоположения с подсказкой -->
             <button class="fa-solid fa-magnifying-glass"></button>
+            <!-- Кнопка поиска с иконкой увеличительного стекла из Font Awesome -->
         </div>
 
         <div class="not-found">
+            <!-- Контейнер для отображения сообщения об ошибке, если местоположение не найдено -->
             <img src="images/404.png">
+            <!-- Изображение, отображаемое при ошибке (например, 404) -->
             <p>Oops! Invalid location :/</p>
+            <!-- Сообщение об ошибке для пользователя -->
         </div>
 
         <div class="weather-box">
+            <!-- Контейнер для отображения информации о погоде -->
             <img src="">
+            <!-- Изображение для отображения иконки погоды (пока пустое) -->
             <p class="temperature"></p>
+            <!-- Параграф для отображения температуры (пока пустой) -->
             <p class="description"></p>
+            <!-- Параграф для отображения описания погоды (пока пустой) -->
         </div>
 
         <div class="weather-details">
+            <!-- Контейнер для дополнительных деталей о погоде -->
             <div class="humidity">
+                <!-- Контейнер для отображения информации о влажности -->
                 <i class="fa-solid fa-water"></i>
+                <!-- Иконка воды из Font Awesome -->
                 <div class="text">
                     <span></span>
+                    <!-- Элемент для отображения значения влажности (пока пустой) -->
                     <p>Humidity</p>
+                    <!-- Подпись для влажности -->
                 </div>
             </div>
             <div class="wind">
+                <!-- Контейнер для отображения информации о скорости ветра -->
                 <i class="fa-solid fa-wind"></i>
+                <!-- Иконка ветра из Font Awesome -->
                 <div class="text">
                     <span></span>
+                    <!-- Элемент для отображения значения скорости ветра (пока пустой) -->
                     <p>Wind Speed</p>
+                    <!-- Подпись для скорости ветра -->
                 </div>
             </div>
         </div>
@@ -51,7 +84,9 @@
     </div>
 
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <!-- Подключает библиотеку Font Awesome для использования иконок -->
     <script src="index.js"></script>
+    <!-- Подключает внешний JavaScript файл для обработки логики приложения погоды -->
 </body>
 
 </html>

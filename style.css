@@ -1,184 +1,243 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    box-sizing: border-box;
+* {
+    margin: 0; 
+    /* Убирает все внешние отступы у всех элементов */
+    padding: 0; 
+    /* Убирает все внутренние отступы у всех элементов */
+    border: 0; 
+    /* Убирает все границы у всех элементов */
+    outline: none; 
+    /* Убирает обводку у всех элементов при фокусировке */
+    box-sizing: border-box; 
+    /* Устанавливает модель коробки, чтобы padding и border входили в ширину и высоту элемента */
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #06283D;
+body {
+    height: 100vh; 
+    /* Устанавливает высоту тела документа на 100% высоты видимой области окна */
+    display: flex; 
+    /* Устанавливает тело документа как флекс-контейнер для выравнивания дочерних элементов */
+    align-items: center; 
+    /* Выравнивает дочерние элементы по вертикали по центру */
+    justify-content: center; 
+    /* Выравнивает дочерние элементы по горизонтали по центру */
+    background: #06283D; 
+    /* Устанавливает фоновый цвет тела документа на темно-синий */
 }
 
-.container{
-    position: relative;
-    width: 400px;
-    height: 105px;
-    background: #fff;
-    padding: 28px 32px;
-    overflow: hidden;
-    border-radius: 18px;
-    font-family: 'Roboto', sans-serif;
-    transition: 0.6s ease-out;
+.container {
+    position: relative; 
+    /* Устанавливает относительное позиционирование для контейнера */
+    width: 400px; 
+    /* Устанавливает ширину контейнера на 400 пикселей */
+    height: 105px; 
+    /* Устанавливает высоту контейнера на 105 пикселей */
+    background: #fff; 
+    /* Устанавливает фоновый цвет контейнера на белый */
+    padding: 28px 32px; 
+    /* Устанавливает внутренние отступы: 28px сверху и снизу, 32px слева и справа */
+    overflow: hidden; 
+    /* Скрывает содержимое, выходящее за пределы контейнера */
+    border-radius: 18px; 
+    /* Устанавливает радиус скругления углов контейнера на 18px */
+    font-family: 'Roboto', sans-serif; 
+    /* Устанавливает шрифт Roboto для текста внутри контейнера */
+    transition: 0.6s ease-out; 
+    /* Добавляет плавный переход для всех изменений стилей за 0.6 секунды с эффектом ease-out */
 }
 
-.search-box{
-    width: 100%;
-    height: min-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.search-box {
+    width: 100%; 
+    /* Устанавливает ширину блока поиска на 100% от родительского контейнера */
+    height: min-content; 
+    /* Устанавливает высоту блока поиска на минимально необходимую для его содержимого */
+    display: flex; 
+    /* Устанавливает блок поиска как флекс-контейнер для выравнивания дочерних элементов */
+    align-items: center; 
+    /* Выравнивает дочерние элементы по вертикали по центру */
+    justify-content: space-between; 
+    /* Распределяет дочерние элементы по горизонтали с равными промежутками между ними */
 }
 
-.search-box input{
-    color: #06283D;
-    width: 80%;
-    font-size: 24px;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding-left: 32px;
+.search-box input {
+    color: #06283D; 
+    /* Устанавливает цвет текста в поле ввода на темно-синий */
+    width: 80%; 
+    /* Устанавливает ширину поля ввода на 80% от родительского контейнера */
+    font-size: 24px; 
+    /* Устанавливает размер шрифта в поле ввода на 24 пикселя */
+    font-weight: 500; 
+    /* Устанавливает жирность шрифта на 500 (полужирный) */
+    text-transform: uppercase; 
+    /* Преобразует текст в верхний регистр */
+    padding-left: 32px; 
+    /* Устанавливает внутренний отступ слева в 32 пикселя для поля ввода */
 }
 
-.search-box input::placeholder{
-    font-size: 20px;
-    font-weight: 500;
-    color: #06283D;
-    text-transform: capitalize;
+.search-box input::placeholder {
+    font-size: 20px; 
+    /* Устанавливает размер шрифта для текста подсказки (placeholder) на 20 пикселей */
+    font-weight: 500; 
+    /* Устанавливает жирность шрифта для текста подсказки на 500 (полужирный) */
+    color: #06283D; 
+    /* Устанавливает цвет текста подсказки на темно-синий */
+    text-transform: capitalize; 
+    /* Преобразует текст подсказки так, чтобы первая буква каждого слова была заглавной */
 }
 
-.search-box button{
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    color: #06283D;
-    background: #dff6ff;
-    border-radius: 50%;
-    font-size: 22px;
-    transition: 0.4s ease;
+.search-box button {
+    cursor: pointer; 
+    /* Устанавливает курсор в виде указателя при наведении на кнопку */
+    width: 50px; 
+    /* Устанавливает ширину кнопки на 50 пикселей */
+    height: 50px; 
+    /* Устанавливает высоту кнопки на 50 пикселей */
+    color: #06283D; 
+    /* Устанавливает цвет текста на темно-синий для кнопки */
+    background: #dff6ff; 
+    /* Устанавливает фоновый цвет кнопки на светло-голубой */
+    border-radius: 50%; 
+    /* Устанавливает радиус скругления углов кнопки на 50%, делая ее круглой */
+    font-size: 22px; 
+    /* Устанавливает размер шрифта для текста кнопки на 22 пикселя */
+    transition: 0.4s ease; 
+    /* Добавляет плавный переход для всех изменений стилей за 0.4 секунды с эффектом ease */
 }
 
-.search-box button:hover{
-    color: #fff;
-    background: #06283D;
+.search-box button:hover {
+    color: #fff; 
+    /* Устанавливает цвет текста на белый при наведении на кнопку */
+    background: #06283D; 
+    /* Устанавливает фоновый цвет кнопки на темно-синий при наведении */
 }
 
-.search-box i{
-    position: absolute;
-    color: #06283D;
-    font-size: 28px;
+.search-box i {
+    position: absolute; 
+    /* Устанавливает абсолютное позиционирование для иконки в блоке поиска */
+    color: #06283D; 
+    /* Устанавливает цвет иконки на темно-синий */
+    font-size: 28px; 
+    /* Устанавливает размер шрифта для иконки на 28 пикселей */
 }
 
-.weather-box{
-    text-align: center;
+.weather-box {
+    text-align: center; 
+    /* Устанавливает выравнивание текста по центру для контейнера погоды */
 }
 
-.weather-box img{
-    width: 60%;
-    margin-top: 30px;
+.weather-box img {
+    width: 60%; 
+    /* Устанавливает ширину изображения в блоке погоды на 60% от родительского контейнера */
+    margin-top: 30px; 
+    /* Устанавливает верхний отступ (margin) для изображения на 30 пикселей */
 }
 
-.weather-box .temperature{
-    position: relative;
-    color: #06283D;
-    font-size: 4rem;
-    font-weight: 800;
-    margin-top: 30px;
-    margin-left: -16px;
+.weather-box .temperature {
+    position: relative; 
+    /* Устанавливает относительное позиционирование для элемента температуры */
+    color: #06283D; 
+    /* Устанавливает цвет текста температуры на темно-синий */
+    font-size: 4rem; 
+    /* Устанавливает размер шрифта для температуры на 4rem (очень крупный текст) */
+    font-weight: 800; 
+    /* Устанавливает жирность шрифта для температуры на 800 (очень жирный) */
+    margin-top: 30px; 
+    /* Устанавливает верхний отступ (margin) для температуры на 30 пикселей */
+    margin-left: -16px; 
+    /* Устанавливает левый отступ (margin) для температуры на -16 пикселей (сдвигает влево) */
 }
 
-.weather-box .temperature span{
-    position: absolute;
-    margin-left: 4px;
-    font-size: 1.5rem;
+.weather-box .temperature span {
+    position: absolute; 
+    /* Устанавливает абсолютное позиционирование для элемента span внутри температуры */
+    margin-left: 4px; 
+    /* Устанавливает левый отступ (margin) для span на 4 пикселя */
+    font-size: 1.5rem; 
+    /* Устанавливает размер шрифта для span на 1.5rem */
 }
 
-.weather-box .description{
-    color: #06283D;
-    font-size: 22px;
-    font-weight: 500;
-    text-transform: capitalize;
+.weather-box .description {
+    color: #06283D; /* Устанавливает цвет текста для описания погоды */
+    font-size: 22px; /* Устанавливает размер шрифта для описания погоды */
+    font-weight: 500; /* Устанавливает толщину шрифта (полужирный) */
+    text-transform: capitalize; /* Преобразует первую букву каждого слова в верхний регистр */
 }
 
-.weather-details{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+.weather-details {
+    width: 100%; /* Устанавливает ширину контейнера с деталями погоды на 100% */
+    display: flex; /* Использует flexbox для расположения дочерних элементов */
+    justify-content: space-between; /* Распределяет дочерние элементы с равными промежутками между ними */
+    margin-top: 30px; /* Устанавливает верхний отступ в 30 пикселей */
 }
 
-.weather-details .humidity, .weather-details .wind{
-    display: flex;
-    align-items: center;
-    width: 50%;
-    height: 100px;
+.weather-details .humidity, .weather-details .wind {
+    display: flex; /* Использует flexbox для расположения элементов внутри этих классов */
+    align-items: center; /* Выравнивает элементы по центру по вертикали */
+    width: 50%; /* Устанавливает ширину каждого элемента на 50% от родительского контейнера */
+    height: 100px; /* Устанавливает высоту элементов на 100 пикселей */
 }
 
-.weather-details .humidity{
-    padding-left: 20px;
-    justify-content: flex-start;
+.weather-details .humidity {
+    padding-left: 20px; /* Устанавливает левый внутренний отступ в 20 пикселей */
+    justify-content: flex-start; /* Выравнивает содержимое по левому краю */
 }
 
-.weather-details .wind{
-    padding-right: 20px;
-    justify-content: flex-end;
+.weather-details .wind {
+    padding-right: 20px; /* Устанавливает правый внутренний отступ в 20 пикселей */
+    justify-content: flex-end; /* Выравнивает содержимое по правому краю */
 }
 
-.weather-details i{
-    color: #06283D;
-    font-size: 26px;
-    margin-right: 10px;
-    margin-top: 6px;
+.weather-details i {
+    color: #06283D; /* Устанавливает цвет иконок в секции деталей погоды */
+    font-size: 26px; /* Устанавливает размер шрифта для иконок на 26 пикселей */
+    margin-right: 10px; /* Устанавливает правый внешний отступ в 10 пикселей */
+    margin-top: 6px; /* Устанавливает верхний внешний отступ в 6 пикселей */
 }
 
-.weather-details span{
-    color: #06283D;
-    font-size: 22px;
-    font-weight: 500;
+.weather-details span {
+    color: #06283D; /* Устанавливает цвет текста для элементов span в секции деталей погоды */
+    font-size: 22px; /* Устанавливает размер шрифта для элементов span на 22 пикселя */
+    font-weight: 500; /* Устанавливает толщину шрифта (полужирный) для элементов span */
 }
 
-.weather-details p{
-    color: #06283D;
-    font-size: 14px;
-    font-weight: 500;
+.weather-details p {
+    color: #06283D; /* Устанавливает цвет текста для параграфов в секции деталей погоды */
+    font-size: 14px; /* Устанавливает размер шрифта для параграфов на 14 пикселей */
+    font-weight: 500; /* Устанавливает толщину шрифта (полужирный) для параграфов */
 }
 
-.not-found{
-    width: 100%;
-    text-align: center;
-    margin-top: 50px;
-    scale: 0;
-    opacity: 0;
-    display: none;
+.not-found {
+    width: 100%; /* Устанавливает ширину контейнера для сообщения "не найдено" на 100% */
+    text-align: center; /* Выравнивает текст по центру */
+    margin-top: 50px; /* Устанавливает верхний отступ в 50 пикселей */
+    scale: 0; /* Устанавливает начальный масштаб элемента на 0 (невидимый) */
+    opacity: 0; /* Устанавливает начальную непрозрачность элемента на 0 (невидимый) */
+    display: none; /* Скрывает элемент, не отображая его на странице */
 }
 
-.not-found img{
-    width: 70%;
+.not-found img {
+    width: 70%; /* Устанавливает ширину изображений внутри контейнера "не найдено" на 70% от родительского элемента */
 }
 
-.not-found p{
-    color: #06283D;
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: 12px;
+.not-found p {
+    color: #06283D; /* Устанавливает цвет текста для параграфов в контейнере "не найдено" */
+    font-size: 22px; /* Устанавливает размер шрифта для параграфов на 22 пикселя */
+    font-weight: 500; /* Устанавливает толщину шрифта (полужирный) для параграфов */
+    margin-top: 12px; /* Устанавливает верхний внешний отступ в 12 пикселей */
 }
 
-.weather-box, .weather-details{
-    scale: 0;
-    opacity: 0;
+.weather-box, .weather-details {
+    scale: 0; /* Устанавливает начальный масштаб элементов на 0 (невидимые) */
+    opacity: 0; /* Устанавливает начальную непрозрачность элементов на 0 (невидимые) */
 }
 
-.fadeIn{
-    animation: 0.5s fadeIn forwards;
-    animation-delay: 0.5s;
+.fadeIn {
+    animation: 0.5s fadeIn forwards; /* Применяет анимацию fadeIn длительностью 0.5 секунды и сохраняет конечное состояние */
+    animation-delay: 0.5s; /* Устанавливает задержку перед началом анимации на 0.5 секунды */
 }
 
-@keyframes fadeIn{
+@keyframes fadeIn {
     to {
-        scale: 1;
-        opacity: 1;
+        scale: 1; /* Устанавливает конечный масштаб элементов на 1 (нормальный размер) */
+        opacity: 1; /* Устанавливает конечную непрозрачность элементов на 1 (полностью видимые) */
     }
 }
